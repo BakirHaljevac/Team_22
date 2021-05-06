@@ -97,19 +97,19 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="170dp"
         android:gravity="fill_vertical"
         android:paddingBottom="16dp"
         android:rotationY="0"
         android:text="@string/register_checkbox"
         android:textSize="14dp"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/register_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_repeat" />
+        app:layout_constraintTop_toBottomOf="@+id/password_repeat"
+        app:layout_constraintVertical_bias="0.176" />
 
     <Button
         android:id="@+id/register_btn"
@@ -117,18 +117,17 @@
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="48dp"
-        android:layout_marginBottom="64dp"
         android:backgroundTint="@color/black"
         android:enabled="true"
         android:text="@string/register_btn"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_checkbox"
 
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintTop_toBottomOf="@+id/register_checkbox"
+        app:layout_constraintVertical_bias="0.41" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

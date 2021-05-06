@@ -43,21 +43,21 @@ class LoginActivity : AppCompatActivity() {
 
         // Responsible for changing language
 
-        // Addapted https://github.com/techguynaresh/androidKotlin
+        // Adapted https://github.com/techguynaresh/androidKotlin
 
-        val language = findViewById<Button>(R.id.btnLanguage)
-        val spinner = findViewById<Spinner>(R.id.spinner)
+        val selectLanguageBtn = findViewById<Button>(R.id.btnLanguage)
+        val languageSpinner = findViewById<Spinner>(R.id.spinner)
 
-        spinner.adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1, languageList)
+        languageSpinner.adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1, languageList)
 
         val lang = myPreference.getLoginCount()
         val index = languageList.indexOf(lang)
         if(index >= 0){
-            spinner.setSelection(index)
+            languageSpinner.setSelection(index)
         }
 
-        language.setOnClickListener {
-            myPreference.setLoginCount(languageList[spinner.selectedItemPosition])
+        selectLanguageBtn.setOnClickListener {
+            myPreference.setLoginCount(languageList[languageSpinner.selectedItemPosition])
             startActivity(Intent(this,LoginActivity::class.java))
             finish()
         }
